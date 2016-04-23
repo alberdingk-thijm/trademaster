@@ -7,4 +7,11 @@ These include:
     
 """
 
+def read_data(datadir):
+    pass
 
+def draw_roads(data):
+    pass
+
+def place_resos(data):
+    pass
