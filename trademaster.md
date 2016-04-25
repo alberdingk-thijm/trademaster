@@ -25,6 +25,10 @@ The viewer takes finalized distance calculations, a set of economic parameters (
 Cartographer is the submodule which processes the basic information about what the world looks like. This primarily includes the location of settlements in the world and the resources
 they produce. Cartographer can process a CSV file and then output intermediate files which are passed on to the accountant and the merchant.
 
+Cartographer takes a units.csv, some number of location CSVs, and a roads CSV for each of those locations.
+
 ##ACCOUNTANT
 
 ##MERCHANT
+Once we have the distances information, we can calculate the actual resources available to each settlement.
+With this information and a resource CSV (e.g. grains.csv), we can determine the prices of goods in that settlement.
