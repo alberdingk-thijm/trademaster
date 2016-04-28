@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<settlements xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="settlements.xsd">
+<settlement>
+	<placename>Marzarbol</placename>
+	<neighbours>
+		<neighbour>
+			<name>Crow's Nest</name>
+			<distance>4</distance>
+		</neighbour>
+		<neighbour>
+			<name>Heap in the Hills</name>
+			<distance>4</distance>
+		</neighbour>
+	</neighbours>
+	<resources>
+		<resource name="bricks">1</resource>
+		<resource name="clay">1</resource>
+		<resource name="fish">1</resource>
+		<resource name="gold">1</resource>
+		<resource name="grain">2</resource>
+		<resource name="grapes">2</resource>
+		<resource name="horses">1</resource>
+		<resource name="ores">1</resource>
+		<resource name="sheep">1</resource>
+	</resources>
+</settlement>
+<settlement>
+	<placename>Crow's Nest</placename>
+	<neighbours>
+		<neighbour>
+			<name>Marzarbol</name>
+			<distance>4</distance>
+		</neighbour>
+	</neighbours>
+	<resources>
+		<resource name="fish">1</resource>
+		<resource name="gold">1</resource>
+		<resource name="spices">2</resource>
+		<resource name="timber">2</resource>
+	</resources>
+</settlement>
+	<settlement>
+		<placename>Heap in the Hills</placename>
+		<neighbours>
+			<neighbour>
+				<name>Marzarbol</name>
+				<distance>4</distance>
+			</neighbour>
+		</neighbours>
+		<resources>
+			<resource name="bricks">1</resource>
+			<resource name="cattle">2</resource>
+			<resource name="clay">1</resource>
+			<resource name="horses">1</resource>
+			<resource name="ores">1</resource>
+			<resource name="sheep">1</resource>
+		</resources>
+	</settlement>
+</settlements>

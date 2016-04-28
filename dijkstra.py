@@ -27,7 +27,7 @@ class NamedFibHeap(FibonacciHeap):
 
 def dijkstra(G, s):
     """
-    Return a tuple of dictionaries of ({v: path from s to v},{v: sum weight from s to v}),
+    Return a tuple of dictionaries of ({v: sum weight from s to v},{v: path from s to v}),
     determined using Dijkstra's algorithm.
     Inputs:
     - G, a weighted undirected graph
