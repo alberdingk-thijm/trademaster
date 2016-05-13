@@ -78,4 +78,29 @@ def commit_paths(paths, refs, outxml):
     but with a complete list of all market distances.
     """
 
-    pass
+    # create the settlements level
+    root = etree.Element("settlements", nsmap={'xsi': 'http://www.w3.org/2001/XMLSchema-instance'})
+    root.set('{http://www.w3.org/2001/XMLSchema-instance}noNamespaceSchemaLocation','settlements.xsd')
+    # for each place in the path
+    for placename,info in paths.items():
+        # create a <settlement>
+        settlement = etree.Element("settlement")
+        # add the neighbours with path info to the <neighbours> element
+        nbrs = etree.SubElement(settlement, "neighbours")
+        for (nbr, dist) in info:
+            nbrnode = etree.Element("neighbour")
+            nbrnode.set("name", nbr)
+            nbrnode.text = dist
+            nbrs.append(nbrnode) 
+        # add the references to the <resources> element
+        resosnode = etree.SubElement(settlement, "resources")
+        for ref,quant in refs.items():
+            resonode = etree.Element("resource")
+            resonode.set("name", ref)
+            resonode.text = quant
+            resosnode.append(resonode)
+        root.append(settlement)
+    # write out
+    with open(outxml, 'r') as output:
+        output.write(settlements)
+    
